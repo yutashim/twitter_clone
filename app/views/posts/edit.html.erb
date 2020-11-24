@@ -1,2 +1,14 @@
-<h1>Posts#edit</h1>
-<p>Find me in app/views/posts/edit.html.erb</p>
+<div class="form_wrapper">
+<div class="form_container">
+<%= form_with(model: @post, local: true) do |form| %>
+  <% if @post.errors.any? %>
+  <% @post.errors.full_messages.each do |msg| %>
+    <ul>
+      <li style="color: firebrick"><%= msg %></li>
+    </ul>
+  <% end %>
+  <% end %>
+  <%= form.text_field :content %>
+  <div class="submit_button"><%= form.submit%></div>
+<% end %>
+</div>
