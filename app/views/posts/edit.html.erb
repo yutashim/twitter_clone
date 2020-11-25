@@ -1,14 +1,2 @@
-<div class="form_wrapper">
-<div class="form_container">
-<%= form_with(model: @post, local: true) do |form| %>
-  <% if @post.errors.any? %>
-  <% @post.errors.full_messages.each do |msg| %>
-    <ul>
-      <li style="color: firebrick"><%= msg %></li>
-    </ul>
-  <% end %>
-  <% end %>
-  <%= form.text_field :content %>
-  <div class="submit_button"><%= form.submit%></div>
-<% end %>
-</div>
+<h3 class="page_title">投稿を編集します</h3>
+<%= render 'form'%>

@@ -1,0 +1,13 @@
+<div class="form_container">
+<%= form_with(model: @post, local: true) do |form| %>
+  <% if @post.errors.any? %>
+  <% @post.errors.full_messages.each do |msg| %>
+    <ul>
+      <li style="color: firebrick"><%= msg %></li>
+    </ul>
+  <% end %>
+  <% end %>
+  <%= form.text_area :content, size: "30x5"%>
+  <div class="submit_button"><%= form.submit%></div>
+<% end %>
+</div>
