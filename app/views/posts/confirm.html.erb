@@ -1,1 +1,12 @@
-confirm_page
+<h3 class="page_title">以下の内容で登録しても良いですか？</h3>
+<%= form_with(model: @post, local: true) do |form| %>
+  <%= form.hidden_field :content %>
+  <div class="post_container">
+    <%= @post.content %>
+  </div>
+  <div class="confirm_menu">
+    <%= form.submit %>
+    <br>
+    <%= link_to '戻る', new_post_path(params: {post: {content: @post.content}}) %>
+  </div>
+<% end %>

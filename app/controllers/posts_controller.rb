@@ -6,6 +6,10 @@ class PostsController < ApplicationController
     @posts = Post.all
   end
 
+  def show
+    redirect_to posts_path
+  end
+
   def new
     @post = Post.new
   end
@@ -39,5 +43,7 @@ class PostsController < ApplicationController
   end
 
   def confirm
+    @post = Post.new(params.require(:post).permit(:content))
+    render 'new' if @post.invalid?
   end
 end
