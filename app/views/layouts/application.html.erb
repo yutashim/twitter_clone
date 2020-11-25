@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>CloneApp</title>
+    <title>TweetApp</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -12,14 +12,14 @@
   <body>
     <header>
       <ul class="header_menu clearfix">
-        <li><%= link_to 'PostApp', home_path %></li>
+        <li><%= link_to 'TweetApp', home_path %></li>
         <li><%= link_to '投稿一覧へ', posts_path %></li>
         <li><%= link_to '新規投稿する', new_post_path %></li>
       </ul>
     </header>
     <%= yield %>
     <footer>
-      <h2>PostAppなら、誰でも手軽に投稿できます。</h2>
+      <h2>TweetAppなら、誰でも手軽に投稿できます。</h2>
     </footer>
   </body>
 </html>

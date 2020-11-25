@@ -25,19 +25,13 @@ header, footer {
   text-decoration: none;
   font-size: 1.5rem;
 }
-
 .clearfix:after {
   display: block;
   clear: both;
   content: "";
 }
-
 .page_title {
   padding-left: 1%;
-}
-footer {
-  position: fixed;
-  bottom: 0;
 }
 footer h2 {
   color: white;
@@ -57,4 +51,20 @@ footer h2 {
   color: darkgray;
   vertical-align: middle;
   text-align: center;
+}
+/* index page */
+.post_container {
+  background-color: whitesmoke;
+  margin: 0 auto;
+  width: 85%;
+  border: 0.5px solid #696969;
+  padding: 0.5em;
+  margin-bottom: 0.5em;
+}
+.edit_destroy_nav {
+  text-align: right;
+  padding-right: 30px;
+}
+.edit_destroy_nav span {
+  margin-right: 30px;
 }
