@@ -24,13 +24,19 @@ class PostsController < ApplicationController
   end
 
   def update
-  @post = Post.find(params[:id])
-  if @post.update(params.require(:post).permit(:content))
-    redirect_to posts_path
-  else
-    render 'edit'
+    @post = Post.find(params[:id])
+    if @post.update(params.require(:post).permit(:content))
+      redirect_to posts_path
+    else
+      render 'edit'
+    end
   end
-  
+
+  def destroy
+    @post = Post.find(params[:id])
+    @post.destroy
+  redirect_to posts_path
+
 end
 
 
