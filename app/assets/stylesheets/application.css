@@ -1,4 +1,7 @@
 /* application.html.erb */
+html {
+  position: relative;
+}
 body {
   margin: 0;
 }
@@ -6,6 +9,7 @@ header, footer {
   width: 100%;
   height: 4rem;
   background-color: deepskyblue;
+  margin: 0;
 }
 .header_menu {
   list-style: none;
@@ -31,8 +35,26 @@ header, footer {
 .page_title {
   padding-left: 1%;
 }
-
+footer {
+  position: fixed;
+  bottom: 0;
+}
 footer h2 {
   color: white;
   padding: 1.3% 0 0 1%;
+  margin: 0;
+}
+/* home */
+.home_page_wrapper {
+  min-height: 600px;
+  width: 100%;
+  display: table;
+}
+
+.home_page_wrapper h1 {
+  display: table-cell;
+  font-size: 4.5em;
+  color: darkgray;
+  vertical-align: middle;
+  text-align: center;
 }
