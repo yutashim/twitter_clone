@@ -11,7 +11,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
+    if params.has_key?('post')
+      @post = Post.new(params.require(:post).permit(:content))
+    else
+      @post = Post.new
+    end
   end
 
   def create
